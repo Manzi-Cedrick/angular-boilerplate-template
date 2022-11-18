@@ -1,18 +1,40 @@
-<div>
-  <div>
+<div class="app-container">
+  <div class="app-header">
     <h1>Team Generator Application</h1>
   </div>
-  <div>
+  <div class="app-body-generate">
     <ul>
-      Generated name input
+      <li *ngFor="let member of memberList ">{{member}}</li>
     </ul>
   </div>
-  <div>
-    <input type="text" placeholder="Enter the names">
-    <button>Add Name</button>
+  <div class="app-addition">
+    <label>Add Name</label>
+    <div class="app-addition-input">
+      <input 
+      #memberValue
+      type="text"
+      placeholder="Enter the member"
+      (input) = "onInput(memberValue.value)"
+      [value]="newmember" 
+      >
+       <!-- We use [] to allow attribute adjective so we can immediately update the value everytime -->
+      <button (click)="addMember()">Add Name</button>
+    </div>
+  </div>
+  <div class="app-divider"></div>
+  <div class="app-addition">
+    <div class="app-addition-input">
+      <input 
+      #numberOfTeamss
+      type="text"
+      placeholder="# of teams (No)"
+      (input) = "onInputNum(numberOfTeamss.value)"
+      [value]="numberOfTeams"
+      >
+      <button (click)="generateTeams()">Generate</button>
+    </div>
   </div>
   <div>
-    <input type="text" placeholder="# of teams">
-    <button>Generate</button>
+    <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
   </div>
 </div>
