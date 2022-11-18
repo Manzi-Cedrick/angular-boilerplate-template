@@ -1,0 +1,89 @@
+.app-container {
+    min-width: 30vw;
+    border-radius: 16px;
+    background: rgb(221,224,231);
+    box-shadow: -3px -3px 7px #ffffff73,
+    2px 2px 5px rgba(94, 104, 121, 0.288);
+    padding: 0em 2em;
+}
+.app-header h1 {
+    font-size:large;
+    font-weight: bold;
+    padding: 1.5em 0; 
+}
+.app-body-generate{
+    background: white;
+    border: 1px solid green;
+    height: 20vh;
+    border-radius:4px;
+    overflow-y: auto;
+}
+.app-body-generate ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em 0;
+    list-style: "\1F449";
+    list-style-position:outside;
+}
+.app-body-generate ul li{
+    padding: 1em;
+    background: rgba(201, 236, 201, 0.298);
+}
+.app-addition{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    padding: 2em 0;
+}
+.app-addition label {
+    font-size: small;
+    font-weight: bold;
+}
+.app-addition-input{
+    display: flex;
+    width: 100%;
+    gap: 2px;
+
+    /* padding: 2em 0; */
+}
+.app-addition-input input {
+    background: white;
+    padding: 1.2em 1em;
+    width: 70%;
+    border: none;
+    /* outline: 2px solid dodgerblue; */
+}
+.app-addition-input button{
+    background-color: green;
+    border: none;
+    color:white;
+    font-weight:500;
+    width: 30%;
+    transition: all 0.4s;
+}
+.app-addition-input button:hover{
+    background: white;
+    color: green;
+    border: 1px solid green;
+    cursor: pointer;
+}
+.app-addition-input input:focus{
+    outline: 1px solid green;
+    color: green;
+}
+.app-divider{
+    outline: 1px solid grey;
+}
+.app-body-generate::-webkit-scrollbar{
+    width: 5px;
+    background: rgb(219, 218, 218);
+}
+.app-body-generate::-webkit-scrollbar-thumb{
+    background: green;
+    border-radius: 12px;
+}
+.error-message{
+    color: red;
+    padding-bottom: 2em;
+    font-size: small;
+}
