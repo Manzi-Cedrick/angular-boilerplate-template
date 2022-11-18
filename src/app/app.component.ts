@@ -10,7 +10,7 @@ import { memberType } from './interface/memberType';
 
 export class AppComponent {
   title = 'angular-template';
-  numberOfTeams: number | "" = 0;
+  numberOfTeams: number = 0;
   newmember: memberType["string"] = "";
   memberList: string[] = [];
   errorMessage: string = "";
@@ -63,6 +63,6 @@ export class AppComponent {
     }
     console.log("The teams : ", this.teams);
     this.memberList = [];
-    this.numberOfTeams = "";
+    this.numberOfTeams = 0;
   }
 }
