@@ -28,6 +28,12 @@
     <div>
       <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
     </div>
+    <div class="app-container-second-grid" *ngIf="teams.length">
+      <app-team
+        *ngFor="let team of teams;let i = index"
+        [team] = "team"
+        [index] = "i"
+      ></app-team>
+    </div>
   </div>
-  <app-team></app-team>
 </div>
