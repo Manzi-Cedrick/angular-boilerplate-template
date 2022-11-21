@@ -1,8 +1,10 @@
 <div class="app-container-second-grid">
     <div class="team-display">
-        <h1>Team Title</h1>
+        <h1>Team {{ index +1}}</h1>
         <ul class="team-list">
-            <li>Manzi Cedrick</li>
+            <li *ngFor="let team_single of team">{{team_single | titlecase}}</li>
+            <!-- The pipes in angular modify the value before client page rendering -->
         </ul>
+        <p class="team-date">{{currentDate | date}}</p>
     </div>
 </div>
