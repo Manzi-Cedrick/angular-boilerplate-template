@@ -36,9 +36,6 @@ export class AppComponent {
     if(this.numberOfTeams <= 0) {
       return this.errorMessage = "Invalid number of teams";
     }
-    if(this.teams.length == 0){
-      return this.errorMessage = 'No member in the list and no team generated';
-    }
     if (this.memberList.length < this.numberOfTeams) {
       this.errorMessage = 'Not enough members';
       return;
