@@ -1,18 +1,19 @@
-.app-container-second-grid{
-    min-width: 30vw;
+.app-container-second-grid {
+    width: 30vw;
     border-radius: 16px;
     background: rgb(221,224,231);
     box-shadow: -3px -3px 7px #ffffff73,
     2px 2px 5px rgba(94, 104, 121, 0.288);
     padding: 1em 1em;
-    min-height : 65vh;
+    /* min-height : 65vh; */
     overflow-y: auto;
     display: flex;
     flex-direction : column;
-    gap: 1em 0;
+    gap: 2em 0;
 }
 .team-display{
     padding: 0.5em;
+    /* width: 100% ; */
     background: rgba(219, 244, 219, 0.285);
 }
 .team-display h1{
@@ -33,4 +34,9 @@
     /* padding: 0 2em; */
     /* background: rgba(201, 236, 201, 0.298); */
     font-size: small;
+}
+.team-date {
+    font-size: x-small;
+    font-weight: bold;
+    color: rgb(94, 94, 94);
 }
